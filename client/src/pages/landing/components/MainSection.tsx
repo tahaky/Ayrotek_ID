@@ -116,7 +116,9 @@ export const MainSection: React.FC = () => {
       exit="exit"
     >
       {isMobile ? renderMobileTitle : renderDesktopTitle}
-      <div className="flex justify-center flex-grow"></div>
+      <div className="flex justify-center flex-grow">
+        <img className="m-5 max-w-lg" src={landingScreen} alt="bcgov-phone-light" />
+      </div>
     </motion.div>
   )
 }

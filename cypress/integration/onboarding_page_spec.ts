@@ -1,4 +1,4 @@
-// const API_URL = Cypress.env('apiUrl')
+// const API_URL = Cypress..env('apiUrl')
 
 // describe('Onboarding Page', () => {
 //   beforeEach(() => {

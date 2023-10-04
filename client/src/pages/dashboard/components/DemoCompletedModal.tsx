@@ -42,9 +42,7 @@ export const DemoCompletedModal: React.FC<Props> = ({ action, cancel }) => {
               <div className="sm:flex sm:items-start">
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <h2 className="text-xl font-medium text-grey-900">{TITLE}</h2>
-                  <div className="mt-2 text-sm">
-
-                  </div>
+                  <div className="mt-2 text-sm"></div>
                 </div>
               </div>
             </div>

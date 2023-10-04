@@ -2,16 +2,16 @@ import type { CustomCharacter } from '../src/content/types'
 
 import { getDateInt } from '../src/utils/dateint'
 export const studentCustom: CustomCharacter = {
-  name: 'Alice',
-  type: 'Student',
+  name: 'Ece',
+  type: 'Customer',
   image: '/public/student/student.svg',
   revocationInfo: [
     {
-      credentialName: 'Student Card',
+      credentialName: 'Insurance Card',
       credentialIcon: '/public/student/icon-student.svg',
-      title: 'Revoke your Student Card',
+      title: 'Revoke your Insurance Card',
       description:
-        'Best Ayrotek College allows you to revoke your Student Card "if":\n• there is a problem with your credential.\n• your device was lost or stolen and you want to secure your personal information.',
+        'Best Ayrotek College allows you to revoke your Insurance Card "if":\n• there is a problem with your credential.\n• your device was lost or stolen and you want to secure your personal information.',
     },
   ],
   progressBar: [
@@ -49,8 +49,8 @@ export const studentCustom: CustomCharacter = {
   onboarding: [
     {
       screenId: 'PICK_CHARACTER',
-      title: 'Meet Alice',
-      text: "Meet Alice Alice is a student at Ayrotek College. To help make student life easier, Ayrotek College is going to offer Alice a digital Student Card to put in her AyroID Wallet.",
+      title: 'Meet Ece',
+      text: 'Meet Ece, Ece is a customer who wants to learn about her credit risk score. In order to make life easier for its customers, Ayrotek Insurance Platform will give Ece a digital Credit Risk Score that she can put in her AyroID Wallet.',
     },
     {
       screenId: 'SETUP_START',
@@ -59,40 +59,66 @@ export const studentCustom: CustomCharacter = {
       image: '/public/common/getStarted.svg',
     },
     {
-      screenId: 'CHOOSE_WALLET',
-      title: 'Install AyroID Wallet',
-      text: 'First, install the AyroID Wallet app onto your smartphone. Select the button below for instructions and the next step.',
-      image: '/public/common/app-store-screenshots.png',
-    },
-    {
       screenId: 'CONNECT',
-      title: 'Connect with Ayrotek College',
-      text: 'Imagine, as Alice, you are logged into the Ayrotek College website (see below). They want to offer you a Digital Student Card. Use your AyroID to scan the QR code from the website.',
+      title: 'Connect with Ayrotek Insurance Platform',
+      text: 'Imagine, as Ece, you are logged into the Ayrotek Insurance Platform website (see below). They want to offer you a Credit Risk Score. Use your AyroID to scan the QR code from the website. As Ece, you are logged into the Ayrotek College website (see below). They want to offer you a Digital Insurance Card. Use your AyroID to scan the QR code from the website.',
       image: '/public/student/onboarding-connect-light.svg',
       issuer_name: 'Ayrotek College',
     },
     {
       screenId: 'ACCEPT_CREDENTIAL',
-      title: 'Accept your student card',
-      text: "Your wallet now has a secure and private connection with Ayrotek College. You should have received an offer in AyroID for a Student Card.\nReview what they are sending, and choose 'Accept offer'.",
+      title: 'Accept Your Credit Risk Score',
+      text: "Your wallet now has a secure and private connection with Ayrotek Insurance Platform. You should have received an offer in AyroID for a Credit risk score.\nReview what they are sending, and choose 'Accept offer'.",
       image: '/public/common/onboarding-credential-light.svg',
       credentials: [
         {
-          name: 'student_card',
-          version: '1.2',
+          name: 'credit_risk_score',
+          version: '1.0',
           icon: '/public/student/icon-student.svg',
           attributes: [
             {
-              name: 'student_first_name',
-              value: 'Alice',
+              name: 'TCKN',
+              value: '28302123744',
             },
             {
-              name: 'student_last_name',
-              value: 'Smith',
+              name: 'Name',
+              value: 'Ece',
             },
             {
-              name: 'expiry_date',
-              value: `${getDateInt(4)}`,
+              name: 'Surname',
+              value: 'Mertoğlu',
+            },
+            {
+              name: 'Report Date',
+              value: '03.10.2023',
+            },
+            {
+              name: 'Reference Cod',
+              value: '8080KN5L845',
+            },
+            {
+              name: 'Credit Score',
+              value: '1325',
+            },
+            {
+              name: 'Total Limit',
+              value: '500.000 TL',
+            },
+            {
+              name: 'Total Debts',
+              value: '124.562 TL',
+            },
+            {
+              name: 'Number of Credits in Collection',
+              value: '1',
+            },
+            {
+              name: 'Total Balance of Credits in Collection',
+              value: '15.564 TL',
+            },
+            {
+              name: 'Last Collection Date',
+              value: '01.10.2023',
             },
           ],
         },
@@ -107,19 +133,19 @@ export const studentCustom: CustomCharacter = {
   ],
   useCases: [
     {
-      id: 'clothesOnline',
-      name: 'Cool Clothes Online',
+      id: 'tenant check',
+      name: 'Tenant Risk Score Check',
       screens: [
         {
           screenId: 'START',
-          title: 'Getting a student discount',
-          text: "Alice (that's you in this demo!) can get a student discount on her online purchase. In this example, you will just tell Cool Clothes Online you're a student.",
+          title: 'Getting a Risk Score Check',
+          text: 'Ece can get a Checking Risk score on her credential. In this example, Ece will just proof her risk score is greater than or equal to required for renting the house .',
           image: '/public/student/useCases/store/card-school.svg',
         },
         {
           screenId: 'CONNECTION',
-          title: "Start proving you're a student",
-          text: "Imagine, as Alice, you are in the checkout process for Cool Clothes Online. They're offering you a 15% discount on your purchase if you can prove you're a student. First, scan the QR code.",
+          title: "Start proving you're a insurance",
+          text: 'Imagine, as Ece, her in the Risk Score Check process for renting a house. They will rent out the house if her risk score is greater than or equal to required for renting the house. First, scan the QR code.',
           image: '/public/student/useCases/store/cool-clothes-no-overlay.png',
           verifier: { name: 'Cool Clothes Online', icon: '/public/student/useCases/store/logo-university.png' },
         },
@@ -128,16 +154,16 @@ export const studentCustom: CustomCharacter = {
           title: 'Confirm the information to send',
           text: "AyroID will now ask you to confirm what to send. Notice how it will only share if the credential has expired, not even the expiry date itself gets shared. You don't have to share anything else for it to be trustable.",
           requestOptions: {
-            title: 'Cool Clothes Online Request',
-            text: 'Cool Clothes Online would like some of your personal information.',
+            title: 'Tenant Risk Score Check Request',
+            text: 'Tenant Risk Score Check would like some of your personal information.',
             requestedCredentials: [
               {
                 icon: '/public/student/useCases/school/icon-university-card.png',
-                name: 'student_card',
+                name: 'credit_risk_score',
                 predicates: {
-                  name: 'expiry_date',
+                  name: 'Credit Score',
                   type: '>=',
-                  value: getDateInt(),
+                  value: 1000,
                 },
               },
             ],
@@ -146,40 +172,40 @@ export const studentCustom: CustomCharacter = {
         {
           screenId: 'STEP_END',
           title: "You're done!",
-          text: "You proved that you're a student, and Cool Clothes Online gave you the discount. It only took a few seconds, you revealed minimal information, and Cool Clothes Online could easily and automatically trust what you sent.",
+          text: 'You proved that your risk skore is enough for renting the house, and you can rent the house. It only took a few seconds, you revealed minimal information, and Tenant Risk Score Check easily and automatically trust what you sent.',
           image: '/public/student/student-accepted.svg',
         },
       ],
     },
     {
-      id: 'study',
-      name: 'Ayrotek College',
+      id: 'takingLoan',
+      name: 'Trust Bank',
       screens: [
         {
           screenId: 'START',
-          title: 'Book a study room',
-          text: "Alice has lots of work to do, and needs a study room for some peace and quiet. In this example, we'll present some info from our Student Card, but just what's needed to book the room.",
-          image: '/public/student/useCases/school/card-school.svg',
+          title: 'Taking a loan from the bank',
+          text: "Ece (that's you in this demo!) wants to get a loan from the bank to buy a new house. In this example, you will tell Trust Bank your credit risk score information.",
+          image: '/public/student/useCases/store/card-school.svg',
         },
         {
           screenId: 'CONNECTION',
-          title: 'Start booking the room',
-          text: "Imagine you're on the room booking page for Ayrotek College, abd you've chosen a data and time. Now they just need to confirm a few details. Scan the QR code to continue.",
-          image: '/public/student/useCases/school/best-bc-college-no-overlay.png',
-          verifier: { name: 'Ayrotek College', icon: '/public/student/useCases/school/logo-university.png' },
+          title: 'Start proving your credit risk score',
+          text: 'Imagine going to Trust Bank as Ece. If you can prove your credit risk score, you can get a loan at affordable rates for your new home. First, scan the QR code.',
+          image: '/public/student/useCases/store/cool-clothes-no-overlay.png',
+          verifier: { name: 'Cool Clothes Online', icon: '/public/student/useCases/store/logo-university.png' },
         },
         {
           screenId: 'PROOF',
           title: 'Confirm the information to send',
-          text: "AyroID Wallet will now ask you to confirm what to send for the booking. Notice how they only need your first name so they can display it on the booking screen. By providing anything from your student card, they automatically know your student card hasn't been revoked.",
+          text: "AyroID will now ask you to confirm what to send. Notice how it will only share if the credential has expired, not even the expiry date itself gets shared. You don't have to share anything else for it to be trustable.",
           requestOptions: {
-            title: 'Ayrotek College Request',
-            text: 'Ayrotek College would like some of your personal information.',
+            title: 'Trust Bank Request',
+            text: 'Trust Bank would like some of your personal information.',
             requestedCredentials: [
               {
                 icon: '/public/student/useCases/school/icon-university-card.png',
-                name: 'student_card',
-                properties: ['student_first_name'],
+                name: 'credit_risk_score',
+                properties: ['TCKN', 'Name', 'Surname', 'Report Date', 'Reference Code', 'Credit Score', 'Total Limit'],
               },
             ],
           },
@@ -187,7 +213,7 @@ export const studentCustom: CustomCharacter = {
         {
           screenId: 'STEP_END',
           title: "You're done!",
-          text: "The room is booked. Just by proving your first name, Best AyroID College could trust you are a current student, and could let others know there's a booking without revealing too much about you.",
+          text: 'You proved your credit risk score and Trus Bank gave you a loan. It only took a few seconds, you revealed very little information, and Trust Bank was able to easily and automatically trust what you sent.',
           image: '/public/student/student-accepted.svg',
         },
       ],

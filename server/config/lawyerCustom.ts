@@ -93,7 +93,7 @@ export const lawyerCustom: CustomCharacter = {
       credentials: [
         {
           name: 'member_card',
-          version: '1.54',
+          version: '1.55',
           icon: '/public/lawyer2/connection/lsbc-logo.png',
           attributes: [
             {
@@ -135,7 +135,7 @@ export const lawyerCustom: CustomCharacter = {
       credentials: [
         {
           name: 'Person',
-          version: '1.2',
+          version: '1.5',
           icon: '/public/lawyer2/connection/bc-logo.png',
           attributes: [
             {
@@ -156,8 +156,8 @@ export const lawyerCustom: CustomCharacter = {
               value: 'Özdemir',
             },
             {
-              name: 'locality',
-              value: 'City',
+              name: 'city',
+              value: 'Istanbul',
             },
             {
               name: 'region',

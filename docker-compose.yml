@@ -14,7 +14,7 @@ services:
     depends_on: 
       - backend
     env_file:
-      - ./client/.env
+      - ./client/..env
   backend:
     image: bc-wallet-demo-server
     build: 
